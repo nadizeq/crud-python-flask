@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+    %}
+    <h1 align="center">Update</h1>
+
+   
+
+
+    <form method="POST">
+
+      {% for note in user.notes %}
+        {% if note.id==note_id %}
+
+        <textarea name="note_data" id="note" class="form-control" placeholder="{{ note.data }}"></textarea>
+        <br />
+        <div align="center">
+          <button type="submit" class="btn btn-primary">Update Note</button>
+        </div>
+      </form>
+    </form>
+          
+        {% endif %}
+      
+      {% endfor %}
+      
+        
+    {% endblock %}
